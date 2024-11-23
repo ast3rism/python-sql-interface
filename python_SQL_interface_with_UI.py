@@ -29,11 +29,11 @@ class MedicineApp(tk.Tk):
     def load_medicine_data(self):
         try:
             # Establish connection to MySQL database (Replace with your credentials)
-            conn = mysql.connector.connect(host="localhost", user="root", password="Aravind123", database="nitte")
+            conn = mysql.connector.connect(host="localhost", user="your_user_name", password="your_pswd", database="database_name")
             cursor = conn.cursor()
 
             # Execute query to fetch medicine data (Modify query as needed)
-            cursor.execute("SELECT drug FROM TBagents")
+            cursor.execute("sql_query_to_execute")
 
             # Fetch all rows and add medicine names to medicine_options list
             for row in cursor.fetchall():
